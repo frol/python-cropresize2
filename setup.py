@@ -19,7 +19,7 @@ try:
 except DistributionNotFound:
     install_requires = ['PIL']
 
-version = '0.1.6'
+version = '0.1.7'
 
 setup(name='cropresize',
       version=version,
