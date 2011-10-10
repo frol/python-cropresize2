@@ -19,17 +19,17 @@ try:
 except DistributionNotFound:
     install_requires = ['PIL']
 
-version = '0.1.7'
+version = '0.1.7a'
 
-setup(name='cropresize',
+setup(name='cropresize2',
       version=version,
       description="crop and resize an image without doing the math yourself",
       long_description=description,
       classifiers=[], # Get strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
       keywords='image',
-      author='Jeff Hammel',
-      author_email='k0scist@gmail.com',
-      url='http://pypi.python.org/pypi/cropresize',
+      author='Jeff Hammel, Vlad Frolov',
+      author_email='k0scist@gmail.com, frolvlad@gmail.com',
+      url='http://pypi.python.org/pypi/cropresize2',
       license='GPL',
       packages=find_packages(exclude=['ez_setup', 'examples', 'tests']),
       include_package_data=True,
@@ -38,6 +38,6 @@ setup(name='cropresize',
       entry_points="""
       # -*- Entry points: -*-
       [console_scripts]
-      crop-resize = cropresize:main
+      crop-resize = cropresize2:main
       """,
       )
