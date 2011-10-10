@@ -1,6 +1,8 @@
 cropresize
 ==========
 
+NOTE: This is the fork of `cropresize <http://pypi.python.org/pypi/cropresize/0.1.6>`_
+
 cropresize uses `PIL <http://www.pythonware.com/products/pil/>`_
 to crop and resize an image as appropriate for web
 presentation. cropresize is a convenience package that allows image
