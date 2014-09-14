@@ -9,15 +9,15 @@ except:
     description = ''
 
 # Dependency check at run time
-# If PIL is not found, then it is added in the ``install_requires`` list
-install_requires = []   # Empty list if PIL is found
+# If Pillow is not found, then it is added in the ``install_requires`` list
+install_requires = []   # Empty list if Pillow is found
 try:
     try:
-        require('PIL')
+        require('Pillow')
     except DistributionNotFound:
         require('Image')
 except DistributionNotFound:
-    install_requires = ['PIL']
+    install_requires = ['Pillow']
 
 version = '0.1.7a'
 
