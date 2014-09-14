@@ -19,7 +19,7 @@ try:
 except DistributionNotFound:
     install_requires = ['Pillow']
 
-version = '0.1.7a'
+version = '0.1.8'
 
 setup(name='cropresize2',
       version=version,
