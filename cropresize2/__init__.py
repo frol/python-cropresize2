@@ -6,6 +6,7 @@ convenience package that allows image resizing without aspect ratio distortion.
 """
 
 import sys
+from io import BytesIO
 try:
     import Image
 except ImportError:
@@ -131,7 +132,13 @@ def main():
                 if options.output:
                     new_image.save(options.output)
                 else:
-                    sys.stdout.write(new_image.tobytes(image.format))
+                    f = BytesIO()
+                    new_image.save(f, image.format)
+                    try:
+                        stdout = sys.stdout.buffer
+                    except AttributeError:
+                        stdout = sys.stdout
+                    stdout.write(f.getvalue())
 
 if __name__ == '__main__':
     main()
